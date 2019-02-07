@@ -5,7 +5,7 @@ Bug types in the Java Edition of Minecraft.
 - Not storing some state data of an entity or block entity to NBT
 - Not defaulting invalid NBT values (or throwing exceptions):    
   These are often edge cases since actions related to modifying NBT are often considered "Invalid", however if these invalid values affect the game as a whole (e.g. crashes), then the reports are usually valid.
-- Considering an entity ID of 0 as non-existent:    
+- ~Considering an entity ID of 0 as non-existent~ (as of 19w06a<sup>?</sup> entity IDs start at 1):    
   Entity IDs start at 0 and often the player is the first entity loaded when the first world is opened, therefore having the ID 0. In this case they cannot use certain functionality properly.
 - Not properly handling full inventories when giving items to the player → results in item loss
 - Objects / functionality not being consistent with (very) similar other objects
