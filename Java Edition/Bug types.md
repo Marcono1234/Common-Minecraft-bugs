@@ -12,3 +12,6 @@ Bug types in the Java Edition of Minecraft.
 - Not handling or changing the state of the player properly  when switching to spectator mode:    
   This allows the player to interact with the world despite being a spectator. Examples are not resetting a currently used item allowing the spectator to release it.
 - Passing the original NBT object reference to another object instead of copying it first  → results in different objects acting as if they were the same object or linked together
+- Using system dependent methods:
+  - Using `String#format(String, Object)`, which does not consider currently selected in-game language
+  
